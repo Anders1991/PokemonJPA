@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Pokemon Center</title>
 </head>
 <body>
 
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Number</th>
+    </tr>
+
+    <tr th:each="pokemon : ${pokemon}">
+        <td th:text="${pokemon.name}"></td>
+        <td th:text="${pokemon.description}"></td>
+        <td th:text="${pokemon.number}"></td>
+    </tr>
+</table>
+<a href="/create"><button>Create</button></a>
 </body>
 </html>

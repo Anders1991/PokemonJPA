@@ -20,7 +20,6 @@ public class Pokemon {
     @ManyToMany
     Set<Team> teams;
 
-
     public int getId() {
         return id;
     }
