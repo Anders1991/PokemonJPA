@@ -27,7 +27,7 @@ public class PokemonController {
 
     @PostMapping("/create")
     public String addPokemon(@ModelAttribute Pokemon pokemon){
-        pokemonRepository.save(new Pokemon());
+        pokemonRepository.save(pokemon);
 
     return "redirect:/";}
 
